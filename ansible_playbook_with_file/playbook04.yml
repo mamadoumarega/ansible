@@ -1,0 +1,16 @@
+- name: Mon playbook  
+  hosts: common
+  become: yes
+  tasks:
+  - name: check connexion
+    ping:
+
+  - name: création /tmp/mamadou
+    file:
+      src: "/tmp/mamadou/1/2/3/4/"
+      dest: /tmp/symlink
+      state: link
+      owner: root
+      group: root
+      mode: 0755
+

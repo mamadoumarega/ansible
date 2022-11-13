@@ -1,0 +1,13 @@
+- name: Suppression du fichier
+  hosts: common
+  become: yes
+  tasks:
+  - name: check connexion
+    ping:
+
+  - name: Suppression
+    file:
+      path: "/tmp/mamadou/"
+      state: absent
+      
+
